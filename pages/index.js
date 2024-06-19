@@ -31,7 +31,7 @@ export default function Home() {
 
   }
 
-  console.log('Environment Variables:', process.env);
+  // console.log('Environment Variables:', process.env);
   return (
     <>
       <Head>

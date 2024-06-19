@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import * as fs from "fs"
 export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   if(req.method == "POST"){
     const instaData = await fs.promises.readdir("instaData");
 

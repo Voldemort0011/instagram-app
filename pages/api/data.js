@@ -1,5 +1,6 @@
 import * as fs from "fs";
 export default async function handler(req, res){
+    res.setHeader('Access-Control-Allow-Origin', '*');
     const filesInDir = await fs.promises.readdir("instaData") 
     let data;
     let arrOfData = [];
@@ -14,6 +15,8 @@ export default async function handler(req, res){
       
 
     }
+
+    
 
     res.status(200).json(arrOfData)
 
